@@ -1,0 +1,28 @@
+package com.company;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Kangaroo extends Animal {
+    static final String habitat = "land";
+    static final String typeOfFood = "grass";
+    static final int maxWeight = 85;
+    static final int livingArea = 300;
+    public List<String> showPersonalInfo = showPersonalInfo();
+
+    public Kangaroo (String name, String dateOfBirth) {
+        super(name, dateOfBirth);
+    }
+    @Override
+    public List<String> showPersonalInfo() {
+        List <String> showPersonalInfo = new ArrayList<>();
+        showPersonalInfo.add(0,getName());
+        showPersonalInfo.add(1,getDateOfBirth());
+        showPersonalInfo.add(2, habitat);
+        showPersonalInfo.add(3, typeOfFood);
+        showPersonalInfo.add(4, (Integer.toString(maxWeight)));
+        showPersonalInfo.add(5, (Integer.toString(livingArea)));
+        return showPersonalInfo;
+    }
+}
